@@ -14,14 +14,16 @@ import java.util.List;
 public class RecyclerViewAdaptador extends RecyclerView.Adapter<RecyclerViewAdaptador.ViewHolder> {
 
     public  static class ViewHolder extends RecyclerView.ViewHolder{
-        private TextView cliente, codigo;
-        ImageView fachadaCliente;
+        private TextView cliente, codigo, estatus;
+        ImageView fachadaCliente, geoCliente;
 
         public ViewHolder( View itemView) {
             super(itemView);
             cliente = (TextView)itemView.findViewById(R.id.tvCliente);
             codigo = (TextView)itemView.findViewById(R.id.tvCodigo);
+            estatus = (TextView)itemView.findViewById(R.id.tvEstatus);
             fachadaCliente = (ImageView) itemView.findViewById(R.id.imgCliente);
+
         }
     }
     public List<ClienteModelo> clienteLista;
@@ -42,7 +44,9 @@ public class RecyclerViewAdaptador extends RecyclerView.Adapter<RecyclerViewAdap
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.cliente.setText(clienteLista.get(position).getCliente());
         holder.codigo.setText(clienteLista.get(position).getCodigo());
+        holder.estatus.setText(clienteLista.get(position).getEstatus());
         holder.fachadaCliente.setImageResource(clienteLista.get(position).getFachadaCliente());
+
     }
 
     @Override

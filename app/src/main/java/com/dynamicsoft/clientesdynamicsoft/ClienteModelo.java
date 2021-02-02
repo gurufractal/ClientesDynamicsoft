@@ -1,17 +1,19 @@
 package com.dynamicsoft.clientesdynamicsoft;
 
 public class ClienteModelo {
-    private String cliente, codigo;
+    private String cliente, codigo, estatus;
     private int fachadaCliente;
 
     public ClienteModelo() {
 
     }
 
-    public ClienteModelo(String cliente, String codigo, int fachadaCliente) {
+    public ClienteModelo(String cliente, String codigo, String estatus,int fachadaCliente) {
         this.cliente = cliente;
         this.codigo = codigo;
+        this.estatus = estatus;
         this.fachadaCliente = fachadaCliente;
+
     }
 
     public String getCliente() {
@@ -30,6 +32,14 @@ public class ClienteModelo {
         this.codigo = codigo;
     }
 
+    public String getEstatus() {
+        return estatus;
+    }
+
+    public void setEstatus(String estatus) {
+        this.estatus = estatus;
+    }
+
     public int getFachadaCliente() {
         return fachadaCliente;
     }
@@ -37,4 +47,6 @@ public class ClienteModelo {
     public void setFachadaCliente(int fachadaCliente) {
         this.fachadaCliente = fachadaCliente;
     }
+
+
 }

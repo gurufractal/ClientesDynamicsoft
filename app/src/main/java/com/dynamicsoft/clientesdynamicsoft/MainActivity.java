@@ -25,10 +25,14 @@ public class MainActivity extends AppCompatActivity {
 
     public List<ClienteModelo> obtenerClientes(){
         List<ClienteModelo> cliente=new ArrayList<>();
-        cliente.add(new ClienteModelo("Almacenes Exitos", "ABC123", R.drawable.cliente01));
-        cliente.add(new ClienteModelo("Farmacia La Primera", "CDE1290", R.drawable.cliente02));
-        cliente.add(new ClienteModelo("Tienda La Rosa", "AST673", R.drawable.cliente03));
-        cliente.add(new ClienteModelo("Ferreteria ", "TAT093", R.drawable.cliente04));
+        cliente.add(new ClienteModelo("Almacenes Exitos", "ABC123", "Llamar",
+                R.drawable.cliente01 ));
+        cliente.add(new ClienteModelo("Farmacia La Primera", "CDE1290", "Actualizar",
+                R.drawable.cliente02));
+        cliente.add(new ClienteModelo("Tienda La Rosa", "AST673","En inventario",
+                 R.drawable.cliente03));
+        cliente.add(new ClienteModelo("Ferreteria ", "TAT093", "Visitar",
+                R.drawable.cliente04));
         return  cliente;
     }
 }
